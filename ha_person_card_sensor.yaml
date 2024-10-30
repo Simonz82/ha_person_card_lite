@@ -27,28 +27,3 @@
         {% elif state >= 40 and state < 50 %} yellow
         {% else %} green
         {% endif %}
-
-- platform: template
-  sensors:
-    simone_geo_1:
-      friendly_name: "simone geo 1"
-      value_template: >
-        {{ (states('sensor.simone_geocoded_location')).split(",")[0] }}
-- platform: template
-  sensors:
-    simone_geo_2:
-      friendly_name: "simone geo 2"
-      value_template: >
-        {{ (states('sensor.simone_geocoded_location')).split(",")[1] }}
-
-- platform: template
-  sensors:
-    simone_proximity:
-      friendly_name: "simone proximity"
-      value_template: >
-        {% set state = states('proximity.simone')|float %}
-        {% if state >= 0 and state < 50 %} {{ (states('proximity.simone')| int * 0)}} km
-        {% elif state >= 50 and state < 999 %} {{ (states('proximity.simone')| int * 0.001) | round(1)}} km
-        {% elif state > 999 and state <= 99999 %} {{ (states('proximity.simone')| int * 0.001) | round(1)}} km
-        {% elif state > 99999 %} {{ (states('proximity.simone')| int * 0.001) | round(0)}} km
-        {% endif %}
