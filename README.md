@@ -19,7 +19,7 @@ poi ...
 6. all'interno del codice della card e del codice inserito nel sensor.yaml, dovete andare a sostituire tutti i miei sensori chiamati simone, con i vostri appena abilitati
 
 <strong>Alla fine ci troveremo ad avere:</strong><br />
-1. Persona con simbolo se è in casa o no (quindi nascosto la zona dove si trova, fa capire SOLO se è in casa o non in casa), nome, ultimo aggiornamento dei dati.
+1. Persona con simbolo se è in casa o no, nome, ultimo aggiornamento dei dati (quindi nascosto la zona dove si trova, fa capire SOLO se è in casa o non in casa), se si vuole vedere invece la ZONA, basta modificare questo nella card: da secondary_info: last-updated a secondary_info: state.
 2. % batteria con cambio colore in base al livello, % memoria libera interna dello smartphone, tipo di rete (se è wifi o 5G)
 
 Risultato finale:
