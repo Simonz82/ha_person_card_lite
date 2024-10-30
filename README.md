@@ -26,6 +26,8 @@ Risultato finale:
 
 <p><img src="example/example1.jpg" alt="" /></p>
 
+<p><img src="example/example2.jpg" alt="" /></p>
+
 <p>Enjoy!</p>
 
 ----------------------------------------
